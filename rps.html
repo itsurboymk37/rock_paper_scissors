@@ -1,0 +1,49 @@
+
+        <script>
+            function computerPlay(){
+                let compNum = Math.floor(Math.random()*3)
+                rps = ""
+                if (compNum == 0){
+                    rps = "rock"
+                } else if (compNum == 1){
+                    rps = "paper"
+                } else {
+                    rps = "scissors"
+                }
+                return rps
+            }
+            
+            const l = "You Lose :("
+            const w = "You Win!"
+            const t = "Play Again..."
+            
+            function roundPlay(playerSelection, computerSelection){
+                console.log (playerSelection)
+                console.log (computerSelection)
+                if (playerSelection === "rock" && computerSelection === "paper") {
+                    return l
+                } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                    return l
+                } else if (playerSelection === "scissorys" && computerSelection === "rock") {
+                    return l
+                } else if (playerSelection === "paper" && computerSelection === "rock") {
+                    return w
+                } else if (playerSelection === "rock" && computerSelection === "scissors") {
+                    return w
+                } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                    return w
+                } else {
+                    return t
+                } 
+            }
+            function game(){
+                console.log (roundPlay("rock", computerPlay()))
+                console.log (roundPlay("rock", computerPlay()))
+                console.log (roundPlay("rock", computerPlay()))
+                console.log (roundPlay("rock", computerPlay()))
+                console.log (roundPlay("rock", computerPlay()))
+            }
+
+            game()
+
+        </script>
