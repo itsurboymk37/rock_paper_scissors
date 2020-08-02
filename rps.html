@@ -36,14 +36,21 @@
                     return t
                 } 
             }
+
             function game(){
-                console.log (roundPlay("rock", computerPlay()))
-                console.log (roundPlay("rock", computerPlay()))
-                console.log (roundPlay("rock", computerPlay()))
-                console.log (roundPlay("rock", computerPlay()))
-                console.log (roundPlay("rock", computerPlay()))
+                ui = window.prompt("rock, paper, or scissors?", "rock")
+                console.log (roundPlay(ui, computerPlay()))
+
             }
 
-            game()
+            function game1(){
+                console.log(game())
+                console.log(game())
+                console.log(game())
+                console.log(game())
+                console.log(game())
+            }
+
+            game1()
 
         </script>
